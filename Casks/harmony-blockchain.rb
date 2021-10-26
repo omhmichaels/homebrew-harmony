@@ -13,7 +13,7 @@ cask "harmony-blockchain" do
     # Attempt to correctly linking these dylibs. 
     # Guidance appreciated if theres is a better method.
     shimscript = "#{staged_path}/harmony-shim.sh"
-    binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony-blockchain"
+    binary shimscript, target: "#{HOMEBREW_PREFIX}/bin/harmony"
     # Copy artifacts to the Application Directory
     artifact "./", target: "#{HOMEBREW_PREFIX}/harmony-blockchain"
     

@@ -5,7 +5,7 @@
 
 ```
 # Tap the harmony-blockchain Homebrew
-brew tap omhmichaels/harmony-brew
+brew tap  harmony/homebrew https://github.com/omhmichaels/homebrew-harmony 
 
 ```
 

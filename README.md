@@ -31,6 +31,13 @@ The completed cask was submitted to( Homebrew/homebrew-cask [https://github.com/
 
 **Formulea Pull Request**:[Homebrew/homebrew-core formulea pull request packaging both harmony node and cli] [https://github.com/Homebrew/homebrew-core/pull/87031]
 
+## Install Tap
+
+```
+# Tap the harmony-blockchain Homebrew
+brew tap  harmony/homebrew https://github.com/omhmichaels/homebrew-harmony 
+
+```
 
 ## Current Casks
 **harmony-blockchain**: 

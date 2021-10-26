@@ -34,11 +34,3 @@ The completed cask was submitted to( Homebrew/homebrew-cask )[https://github.com
 
 
 ### (Usage)[./USAGE.md] 
-
-## Reasoning for creating an official harmony one tap
-"Homebrew’s versions should not be used to “pin” formulae to your personal requirements. You should instead create your own tap for formulae you or your organisation wish to control the versioning of, or those that do not meet the above standards. Software that has regular API or ABI breaking releases still needs to meet all the above requirements; that a brew upgrade has broken something for you is not an argument for us to add and maintain a formula for you."
-
-https://docs.brew.sh/Versions
-
-### Other Resources for Future Development
-https://docs.brew.sh/Acceptable-Formulae

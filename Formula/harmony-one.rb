@@ -19,12 +19,13 @@ class HarmonyOne < Formula
     # CONTRIBUTORS: Keep resources updated according to the changelog release tag:
     #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
     resource "bls" do
-      url "https://github.com/harmony-one/bls/archive/refs/tags/v0.0.6.tar.gz"
+      url "https://github.com/harmony-one/bls/archive/refs/tags/v0.0.6.tar.gz",
+          version: "0.0.6"
     end
   
     resource "mcl" do
-      head "https://github.com/harmony-one/mcl.git",
-          revision: "99e9aa76e84415e753956c618cbc662b2f373df1"
+      url: "https://github.com/harmony-one/mcl.git",
+          version: ""
     end
   
     def install

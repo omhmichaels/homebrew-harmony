@@ -20,12 +20,10 @@ class HarmonyOne < Formula
     #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
     resource "bls" do
       url "https://github.com/harmony-one/bls.git",
-          revision: "2b7e49894c0f15f5c40cf74046505b7f74946e52"
     end
   
     resource "mcl" do
       url "https://github.com/harmony-one/mcl.git",
-          revision: "99e9aa76e84415e753956c618cbc662b2f373df1"
     end
   
     def install

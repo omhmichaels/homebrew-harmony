@@ -1,4 +1,4 @@
-class HarmonyOne < Formula
+class HarmonyOne ß< Formula
     desc "Harmony One Blockchain Node"
     homepage "https://github.com/harmony-one/harmony"
     # CONTRIBUTORS: Update the following (url, sha256)
@@ -19,11 +19,13 @@ class HarmonyOne < Formula
     # CONTRIBUTORS: Keep resources updated according to the changelog release tag:
     #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
     resource "bls" do
-      url "https://github.com/harmony-one/bls.git"
+      url "https://github.com/harmony-one/bls.git",
+          revision: "2b7e49894c0f15f5c40cf74046505b7f74946e52"
     end
   
     resource "mcl" do
-      url "https://github.com/harmony-one/mcl.git"
+      url "https://github.com/harmony-one/mcl.git",
+          revision: "99e9aa76e84415e753956c618cbc662b2f373df1"
     end
   
     def install

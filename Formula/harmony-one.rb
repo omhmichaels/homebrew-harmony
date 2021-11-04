@@ -8,7 +8,6 @@ class HarmonyBlockchain < Formula
 
     # CONTRIBUTORS: Versions may need to be updated according to documentation at:
     #    -  https://github.com/harmony-one/harmony 
-    depends_on macos:  ">= :high_sierra"
     depends_on "go@1.16.3"
     depends_on "openssl@1.1" 
     depends_on "gmp"

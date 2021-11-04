@@ -45,7 +45,8 @@ brew tap  harmony/homebrew https://github.com/omhmichaels/homebrew-harmony
 
 * *Install*:
 ```
-        # Be sure to tap the repository `omhmichaels/harmony-homebrew`. You can check your taps with `brew tap` 
+        # Be sure to tap the repository 
+        brew tap harmony/homebrew https://github.com/omhmichaels/homebrew-harmony
 
         # Install Harmony blockchain
         brew install harmony-blockchain

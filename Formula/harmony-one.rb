@@ -25,7 +25,7 @@ class HarmonyOne < Formula
   
     resource "mcl" do
       url "https://github.com/harmony-one/mcl.git",
-          version: :latest
+          version: => latest
     end
   
     def install

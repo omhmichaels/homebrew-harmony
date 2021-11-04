@@ -19,8 +19,7 @@ class HarmonyOne < Formula
     # CONTRIBUTORS: Keep resources updated according to the changelog release tag:
     #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
     resource "bls" do
-      url "https://github.com/harmony-one/bls.git",
-          version: "0.0.6"
+      url "https://github.com/harmony-one/bls/archive/refs/tags/v0.0.6.tar.gz"
     end
   
     resource "mcl" do

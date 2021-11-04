@@ -1,4 +1,4 @@
-class HarmonyBlockchain < Formula
+class HarmonyOne < Formula
     desc "Harmony One Blockchain Node"
     homepage "https://github.com/harmony-one/harmony"
     # CONTRIBUTORS: Update the following (url, sha256)

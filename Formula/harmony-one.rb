@@ -24,7 +24,7 @@ class HarmonyOne < Formula
     end
   
     resource "mcl" do
-      url "https://github.com/harmony-one/mcl.git",
+      head "https://github.com/harmony-one/mcl.git",
           revision: "99e9aa76e84415e753956c618cbc662b2f373df1"
     end
   

@@ -24,7 +24,7 @@ class HarmonyOne < Formula
   
     resource "mcl" do
       url "https://github.com/harmony-one/mcl.git",
-          revision: "99e9aa76e84415e753956c618cbc662b2f373df1"
+          branch: "master"
     end
   
     def install

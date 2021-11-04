@@ -56,4 +56,4 @@ class HarmonyOne < Formula
     #service do
     #  run [opt_bin/"foo"]
     #end
-  end
+end

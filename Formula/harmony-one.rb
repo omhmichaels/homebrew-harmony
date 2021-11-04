@@ -20,7 +20,7 @@ class HarmonyOne < Formula
     #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
     resource "bls" do
       url "https://github.com/harmony-one/bls/archive/refs/tags/v0.0.6.tar.gz",
-          version: "0.0.6"
+        version: "0.0.6"
     end
   
     resource "mcl" do

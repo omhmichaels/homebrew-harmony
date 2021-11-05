@@ -8,8 +8,7 @@ class HarmonyOne < Formula
 
     def install
       # Move Binaries and Libs to correct Install Locations
-      bin.install "bin/harmony"
-      bin.install "bin/bootnode"
+      bin.install "harmony"
       lib.install  Dir["dylib"] 
 
     end

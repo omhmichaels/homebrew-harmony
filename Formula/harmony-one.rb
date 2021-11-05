@@ -26,7 +26,7 @@ class HarmonyOne < Formula
   
     def install
       ENV.O0 if OS.linux?
-      ENV.deparrellize
+      ENV.deparallelize
 
       # Get unversioned source for custom harmony bls fork
       # Adhoc method of adding resource due to errors with resource formula method

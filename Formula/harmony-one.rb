@@ -2,12 +2,13 @@ class HarmonyOne < Formula
     desc "Harmony One Blockchain Node"
     homepage "https://github.com/harmony-one/harmony"
     # CONTRIBUTORS: Update the following (url, sha256)
-    url "9868535e36a56589dbeefd576ad4bb8ab1aa87b40b7b436353d0ea7730299cbc"
+    url "https://github.com/harmony-one/harmony/archive/refs/tags/v4.3.0.zip"
+    sha256 "9868535e36a56589dbeefd576ad4bb8ab1aa87b40b7b436353d0ea7730299cbc"
     license "LGPL-3.0-or-later"
 
     # CONTRIBUTORS: Versions may need to be updated according to documentation at:
     #    -  https://github.com/harmony-one/harmony 
-    depends_on "go@1.16" => [:build, :test]
+    depends_on "go@1.16.3" => [:build, :test]
     depends_on "openssl@1.1" 
     depends_on "gmp"
     depends_on "make" => [:build, :test]

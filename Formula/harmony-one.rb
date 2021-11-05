@@ -7,7 +7,7 @@ class HarmonyOne < Formula
     license "LGPL-3.0-or-later"
 
     def install
-      system "pwd"
+      system "echo", "$(pwd)"
       # Move Binaries and Libs to correct Install Locations
       bin.install "harmony"
       lib.install  Dir["*dylib"] 

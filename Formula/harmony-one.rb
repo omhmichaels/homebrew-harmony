@@ -24,16 +24,19 @@ class HarmonyOne < Formula
     end
   
     resource "mcl" do
-      url "https://github.com/harmony-one/mcl.git",
-          version: => latest
+      url "https://github.com/harmony-one/mcl/archive/refs/tags/new_deserialize_api.tar.gz",
+           tag : "new_deserialize_api"
     end
   
     def install
       ENV.O0 if OS.linux?
       ENV.deparrellize
-      #dir = buildpath/"src/github.com/harmony-one/harmony"
-      #dir.install buildpath.children
-  
+
+      # Get unversioned source for custom harmony bls fork
+      # Adhoc method of adding resource due to errors with resource formula method
+      # needing a version. 
+      system "git clone https://github.com/harmony-one/bls"
+
       # Install Build Tools
       system "scripts/install_build_tools.sh"
 

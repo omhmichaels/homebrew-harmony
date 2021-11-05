@@ -7,7 +7,6 @@ cask "harmony-blockchain" do
     desc "Network node for the Harmony blockchain"
     homepage "https://github.com/harmony-blockchain/harmony"
 
-    depends_on macos
 
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
     # Attempt to correctly linking these dylibs. 

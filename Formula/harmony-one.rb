@@ -9,7 +9,7 @@ class HarmonyOne < Formula
     def install
       # Move Binaries and Libs to correct Install Locations
       bin.install "harmony"
-      lib.install  Dir["dylib"] 
+      lib.install  Dir["*dylib"] 
 
     end
     

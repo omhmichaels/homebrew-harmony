@@ -8,7 +8,7 @@ class HarmonyOne < Formula
 
     # CONTRIBUTORS: Versions may need to be updated according to documentation at:
     #    -  https://github.com/harmony-one/harmony 
-    depends_on "go@1.16.3" => [:build, :test]
+    depends_on "go@1.16" => [:build, :test]
     depends_on "openssl@1.1" 
     depends_on "gmp"
     depends_on "make" => [:build, :test]

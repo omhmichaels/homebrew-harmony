@@ -16,41 +16,6 @@ class HarmonyOne < Formula
     depends_on "bash" 
 
   
-    # CONTRIBUTORS: Keep resources updated according to the changelog release tag:
-    #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
-    resource "bls" do
-      url "https://github.com/harmony-one/bls/archive/refs/tags/v0.0.6.tar.gz",
-        version: "0.0.6"
-    end
-
-  
-    def install
-      ENV.O0 if OS.linux?
-      ENV.deparrellize
-
-      # Get unversioned source for custom harmony bls fork
-      # Adhoc method of adding resource due to errors with resource formula method
-      # needing a version. 
-      system "git clone https://github.com/harmony-one/mcl.git"
-
-      # Install Build Tools
-      system "scripts/install_build_tools.sh"
-
-      # Correct Directory Locations In Build Scripts
-      # TODO: Switch to brew 'inreplace' formula method
-      system "sed -i -e 's/openssl/openssl\@1\.1/g' Makefile"
-      system "sed -i -e 's/openssl/openssl\@1\.1/g' scripts/go_executable_build.sh" 
-
-      # Build Binarys
-      system "go mod tidy"
-      system "make "
-
-      # Move Binaries and Libs to correct Install Locations
-      bin.install "bin/harmony"
-      bin.install "bin/bootnode"
-      lib.install  Dir["bin/*dylib"] 
-
-    end
     
     # TODO: Add sevice functionality
     #service do

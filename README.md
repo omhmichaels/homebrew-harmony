@@ -23,6 +23,10 @@ The bounty specifications ask for a Cask. The reasoning for this is believed to 
 
 *The bounty also mention bottles but does not mention formulea.*
 
+**Homebrew notes on why to maintain a tap**
+*Homebrew’s versions should not be used to “pin” formulae to your personal requirements. You should instead create your own tap for formulae you or your organisation wish to control the versioning of, or those that do not meet the above standards. Software that has regular API or ABI breaking releases still needs to meet all the above requirements; that a brew upgrade has broken something for you is not an argument for us to add and maintain a formula for you.*
+
+
 
 The completed cask was submitted to( Homebrew/homebrew-cask [https://github.com/Homebrew/homebrew-cask/pull/113134] but is unable to be pulled in favor of an open [pull request in homebrew/homebrew-core][https://github.com/Homebrew/homebrew-core/pull/87031] for a formula of the same name.
 

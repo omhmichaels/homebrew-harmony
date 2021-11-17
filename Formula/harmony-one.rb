@@ -8,16 +8,18 @@ class HarmonyOne < Formula
 
   # CONTRIBUTORS: Versions may need to be updated according to documentation at:
   #    -  https://github.com/harmony-one/harmony
-  depends_on "bash"
+  depends_on arch: :intel
   depends_on "gmp"
-  depends_on "go@1.16"
+  depends_on "go"
   depends_on "jq"
-  depends_on "make"
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   # CONTRIBUTORS: Keep resources updated according to the changelog release tag:
   #     - https://github.com/harmony-one/harmony/releases/tag/v#{version}
-
   resource "bls" do
     url "https://github.com/harmony-one/bls.git",
         revision: "2b7e49894c0f15f5c40cf74046505b7f74946e52"
@@ -48,14 +50,8 @@ class HarmonyOne < Formula
 
     cd buildpath/"src/github.com/harmony-one/harmony"
 
-    # Correct Directory Locations In Build Scripts
-    # TODO: Switch to brew 'inreplace' formula method
-    system "sed -i -e 's/openssl/openssl\@1\.1/g' Makefile"
-    system "sed -i -e 's/openssl/openssl\@1\.1/g' scripts/go_executable_build.sh"
-
     # Build Binarys
-    system "go", "mod", "tidy"
-    system "make "
+    system "make"
 
     bin.install "./bin/harmony" => "harmony"
     bin.install "./bin/bootnode" => "bootnode"
@@ -72,23 +68,6 @@ class HarmonyOne < Formula
       You may also need to allow network access depending on your firewall
       configuration.
 
-      USAGE: harmony
-
-      If you do not have any keys or ONE wallet configured you will#{"  "}
-      get the following error:
-
-          ERROR when loading bls key: stat ./.hmy/blskeys: no such file or directory
-
-      You can create these with the following commands:
-          # Download the GO SDK
-          curl -O https://raw.githubusercontent.com/harmony-one/go-sdk/master/scripts/hmy.sh
-      #{"    "}
-          # Make the wrapper script for the binaries exacutable#{"   "}
-          chmod u+x hmy.sh
-
-          # Create wallet
-          ./hmy.sh -d
-          ./hmy keys add test-account --passphrase
 
       Find more documentation at:
 
@@ -101,11 +80,10 @@ class HarmonyOne < Formula
 
   test do
     # Basic version check
-    assert true, `bootnode --version`
-    assert true, `harmony --version`
+    assert_match version.to_s,  shell_output("bootnode --version")
+    assert_match version.to_s,  shell_output("harmony --version")
 
     # Test that the binary fails with bls key error
-    refute_match "/ERROR(.*)(bls.*)/", `harmony`
+    assert_match(/ERROR(.*)(bls.*)/, shell_output("harmony"))
   end
 end
-
